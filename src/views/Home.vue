@@ -1,9 +1,11 @@
 <template>
   <div>
-    <Hero class="h-40 bg-amber-400"/>
+    <Hero />
+    <MainContent />
   </div>
 </template>
 
 <script setup>
   import Hero from "../components/Hero.vue"
+  import MainContent from "../components/MainContent.vue"
 </script>
