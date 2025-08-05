@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <Header class="h-12" />
+    <Header class="h-16" />
 
     <main class="flex-1">
       <Home />
