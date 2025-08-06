@@ -1,5 +1,5 @@
 <template>
-  <div class="h-168 pt-10 relative overflow-hidden"
+  <div class="h-164 pt-10 relative overflow-hidden"
     style="
     background: 
       linear-gradient(

@@ -1,5 +1,6 @@
 <template>
   <header>
-    <h1>ЯБ КУПИЛ</h1>
+    <h1>Добавь в жизнь 
+      немного абсурда</h1>
   </header>
 </template>
