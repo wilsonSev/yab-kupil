@@ -29,7 +29,7 @@
     <img
       src="/jar.png"
       :style="{ transform: `translateY(${scrollY * 0.35}px)` }"
-      class="absolute top-16 left-120 w-56 z-10 transition-transform duration-15"
+      class="absolute top-24 left-120 w-56 z-10 transition-transform duration-15"
     >
 
     <img src="/hero.svg" class="h-56 w-auto ml-16 mt-24"
@@ -37,8 +37,8 @@
     <div class="transition-transform duration-15" :style="{ transform: `translateY(${scrollY * 0.1}px)` }">
       <button
         class="
-          mt-10
-          ml-16
+          mt-8
+          ml-46
           inline-flex
           items-center
           justify-center

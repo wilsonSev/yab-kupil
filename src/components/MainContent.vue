@@ -1,14 +1,24 @@
 <template>
-  <div class="h-300"
+  <div class="h-[2000px]"
   style="
     background: 
       linear-gradient(
         to bottom,
-        #f9d49f 0%,
-        #E9FCFF 20%
+        rgba(249, 212, 159, 0) 0%,
+        rgba(233, 252, 255, 1) 10%
+      ),
+      linear-gradient(
+        to right,
+        rgba(251, 166, 45, 1),
+        rgba(251, 166, 45, 0)
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(249, 212, 159, 1) 0%,
+        rgba(233, 252, 255, 1) 20%
       );
+      
   ">
-    <h1>Main Content</h1>
   </div>
 </template>
 <script setup>
