@@ -1,8 +1,12 @@
 <template>
-  <div class="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl shadow-lg p-4">
-    <slot />
-  </div>
+  <Glass class="w-72 aspect-square">
+    <img :src="image" alt="Product image" class="w-58 mx-auto drop-shadow-lg" />
+  </Glass>
 </template>
 
-<script>
+<script setup>
+import Glass from "./Glass.vue"
+defineProps({
+  image: String
+})
 </script>

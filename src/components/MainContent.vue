@@ -16,20 +16,23 @@
         to bottom,
         rgba(249, 212, 159, 1) 0%,
         rgba(233, 252, 255, 1) 20%
-      );
-      
+      );   
   ">
     <div class="flex justify-center px-4 py-0">
-      <ProductCard class="w-full max-w-[580px] font-sans sm:text-[20px] font-medium border-[1.5px] px-20 py-6">
+      <Glass class="w-full max-w-[580px] font-sans sm:text-[20px] font-medium px-20 py-6"
+        data-aos="fade-up"
+        data-aos-duration="500"
+        >
         <div class="text-transparent bg-clip-text bg-gradient-to-r from-[#6B2E0D] to-[#9E2200] text-[28px]">
           Мы симулировали весь процесс онлайн-покупки.<br />
           Чтобы вы почувствовали, как мало вам<br />
           на самом деле нужно.
         </div>
-      </ProductCard>
+      </Glass>
     </div>
   </div>
 </template>
 <script setup>
-import ProductCard from "../components/ProductCard.vue"
+import Glass from "./Glass.vue"
+import ProductCard from "./ProductCard.vue"
 </script>
