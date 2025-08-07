@@ -1,33 +1,24 @@
 <template>
-  <Glass class="w-72 aspect-square flex flex-col justify-between items-center p-4 text-center relative">
-    <img :src="image" alt="Product image"
-      :class="[imageWidth, 'mx-auto drop-shadow-lg']" />
-    <div class="flex items-center justify-between mt-4 gap-2 w-68">
-      <div class="w-full text-left ml-4">
-        <h3 class="text-xl font-semibold text-[#6B440D] mt-6">{{ title }}</h3>
-        <p class="text-3xl font-bold text-[#4B2D02] -mt-1">{{ price }}$</p>
+  <Glass class="w-72 aspect-square flex flex-col justify-between">
+    <div class="w-full">
+      <div class="flex flex-col gap-y-2 grow items-center">
+      <img :src="image" alt="Product image"
+      :class="[imageWidth, 'mx-auto drop-shadow-xl']" />
+      <h3 class="w-full px-4 text-left text-base sm:text-lg font-semibold text-[#6B440D] leading-snug">{{ title }}</h3>
+    </div>
+    <div>
+    <div class="flex items-center grow justify-between">
+      <div class="text-left ml-4">
+        <p class="text-2xl font-bold text-[#4B2D02]">{{ price }}$</p>
       </div>
       <button class="
-        leading-none
-        px-3 py-3
-        mt-8
-        mr-2
-      bg-[#4B2D02] 
-      text-white text-sm font-semibold
-        rounded-full
-        shadow-md
-        hover:shadow-lg
-        hover:scale-102
-        active:scale-98
-        transition-all duration-200
-        w-64
-        flex
-        items-center
-        gap-2
+        mt-auto bg-[#4B2D02] text-white text-[10px] font-semibold rounded-full shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 px-4 py-2 flex items-center gap-2 justify-center
       ">
         <img src="/CartIcon.svg" class="w-[12px] mb-[1px]">
         <span>В тележку</span>
       </button>
+    </div>
+    </div>
     </div>
   </Glass>
 </template>

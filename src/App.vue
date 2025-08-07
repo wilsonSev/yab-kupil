@@ -5,8 +5,7 @@
     <main class="flex-1">
       <Home />
     </main>
-
-    <Footer class="h-24" />
+    <Footer class="h-72" />
   </div>
 </template>
 

@@ -26,7 +26,11 @@
     </button>
   </form>
   <nav>
-    <button>
+    <button class="
+    transition-all duration-200
+    hover:scale-101 hover:opacity-90
+    active:scale-99 active:opacity-70
+  ">
       <svg class="h-10 w-auto mt-2" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
         <svg width="46" height="52" viewBox="0 0 46 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_232_56)">
@@ -53,7 +57,11 @@
       </svg>
 
     </button>
-    <button>
+    <button class="
+    transition-all duration-200
+    hover:scale-101 hover:opacity-90
+    active:scale-99 active:opacity-70
+  ">
       <svg class="h-10 w-12 mt-1" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
         <svg width="59" height="53" viewBox="0 0 59 53" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_231_49)">

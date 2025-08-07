@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[2000px]"
+  <div
   style="
     background: 
       linear-gradient(
@@ -17,7 +17,7 @@
         rgba(249, 212, 159, 1) 0%,
         rgba(233, 252, 255, 1) 20%
       );   
-  ">
+  " class="p-32">
     <div class="flex justify-center px-4 py-0">
       <Glass class="w-full max-w-[900px] font-sans sm:text-[20px] font-medium px-20 py-6"
         data-aos="fade-up"
@@ -34,7 +34,7 @@
          :style="{ transform: `translateY(${scrollY * 0.05}px)` }">
       <Greeting />
     </div>  
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
       <ProductCard 
         v-for="product in products"
         :key="product.id"

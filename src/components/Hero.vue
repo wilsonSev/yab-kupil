@@ -37,7 +37,7 @@
         <img src="/hero.svg" class="h-56 w-auto ml-16 mt-24"
         :style="{ transform: `translateY(${scrollY * 0.1}px)` }">
         <div class="transition-transform duration-15" :style="{ transform: `translateY(${scrollY * 0.1}px)` }">
-          <button
+          <button @click="scrollToProducts"
             class="
               mt-8
               ml-46
@@ -82,4 +82,32 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+
+const productsSection = ref(null)
+const scrollToProducts = () => {
+  // const el = document.getElementById('products')
+  // if (el) {
+  //   el.scrollIntoView({ behavior: 'smooth' })
+  // }
+  const target = document.getElementById('products')
+  if (!target) return
+  const targetPosition = target.getBoundingClientRect().top + window.pageYOffset
+  const startPosition = window.pageYOffset
+  const distance = targetPosition - startPosition
+  const duration = 500 // в миллисекундах
+  let startTime = null
+
+  const easeInOutQuad = (t) =>
+    t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
+
+  const animation = (currentTime) => {
+    if (!startTime) startTime = currentTime
+    const timeElapsed = currentTime - startTime
+    const run = easeInOutQuad(timeElapsed / duration) * distance + startPosition
+    window.scrollTo(0, run)
+    if (timeElapsed < duration) requestAnimationFrame(animation)
+  }
+
+  requestAnimationFrame(animation)
+}
 </script>
