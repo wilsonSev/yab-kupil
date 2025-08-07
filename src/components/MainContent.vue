@@ -30,9 +30,28 @@
         </div>
       </Glass>
     </div>
+    <div class="flex justify-center px-4 py-24"
+         :style="{ transform: `translateY(${scrollY * 0.05}px)` }">
+      <Greeting />
+    </div>  
   </div>
 </template>
 <script setup>
 import Glass from "./Glass.vue"
+import Greeting from "./Greeting.vue"
 import ProductCard from "./ProductCard.vue"
+
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+const scrollY = ref(0)
+const handleScroll = () => {
+  scrollY.value = window.scrollY
+}
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>

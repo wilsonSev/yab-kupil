@@ -61,7 +61,7 @@
       </div>
       <div class="flex justify-center mt-4 w-[420px] transition-transform duration-15"
       :style="{ transform: `translateY(${scrollY * 0.05}px)` }">
-        <ProductCard image="/burger.png"  />
+        <ProductCard image="/burger.png" title="Биг Мак" price="99.90" />
       </div>
     </div>
   </div>  
