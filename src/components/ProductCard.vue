@@ -1,6 +1,7 @@
 <template>
   <Glass class="w-72 aspect-square flex flex-col justify-between items-center p-4 text-center relative">
-    <img :src="image" alt="Product image" class="w-58 mx-auto drop-shadow-lg" />
+    <img :src="image" alt="Product image"
+      :class="[imageWidth, 'mx-auto drop-shadow-lg']" />
     <div class="flex items-center justify-between mt-4 gap-2 w-68">
       <div class="w-full text-left ml-4">
         <h3 class="text-xl font-semibold text-[#6B440D] mt-6">{{ title }}</h3>
@@ -36,6 +37,11 @@ import Glass from "./Glass.vue"
 defineProps({
   image: String,
   title: String,
-  price: Number
+  price: Number,
+  imageWidth: {
+    type: String,
+    default: 'w-58' // Tailwind класс по умолчанию
+  }
 })
+
 </script>

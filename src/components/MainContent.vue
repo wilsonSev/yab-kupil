@@ -19,7 +19,7 @@
       );   
   ">
     <div class="flex justify-center px-4 py-0">
-      <Glass class="w-full max-w-[580px] font-sans sm:text-[20px] font-medium px-20 py-6"
+      <Glass class="w-full max-w-[900px] font-sans sm:text-[20px] font-medium px-20 py-6"
         data-aos="fade-up"
         data-aos-duration="500"
         >
@@ -34,6 +34,16 @@
          :style="{ transform: `translateY(${scrollY * 0.05}px)` }">
       <Greeting />
     </div>  
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ProductCard 
+        v-for="product in products"
+        :key="product.id"
+        :title="product.title"
+        :image="product.image"
+        :price="product.price"
+        :imageWidth="product.imageWidth"
+      />
+    </div>
   </div>
 </template>
 <script setup>
@@ -42,6 +52,7 @@ import Greeting from "./Greeting.vue"
 import ProductCard from "./ProductCard.vue"
 
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import {products} from "../data/products"
 
 const scrollY = ref(0)
 const handleScroll = () => {
@@ -54,4 +65,5 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+
 </script>
