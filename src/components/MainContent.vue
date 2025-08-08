@@ -42,14 +42,26 @@
         :image="product.image"
         :price="product.price"
         :imageWidth="product.imageWidth"
+        @click="open(product)" 
       />
     </div>
   </div>
+
+  <Teleport to="body">
+  <Transition name="fade-zoom">
+    <ProductModal
+      v-if="selected"
+      :product="selected"
+      @close="close"
+    />
+  </Transition>
+</Teleport>
 </template>
 <script setup>
 import Glass from "./Glass.vue"
 import Greeting from "./Greeting.vue"
 import ProductCard from "./ProductCard.vue"
+import ProductModal from "./ProductModal.vue" 
 
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import {products} from "../data/products"
@@ -58,12 +70,40 @@ const scrollY = ref(0)
 const handleScroll = () => {
   scrollY.value = window.scrollY
 }
+
+const selected = ref(null)
+const isModalOpen = ref(false)
+
+function open(p){
+  selected.value = p
+  isModalOpen.value = true
+  lockScroll(true)
+}
+function close(){
+  selected.value = null
+  isModalOpen.value = false
+  lockScroll(false)
+}
+function onEsc(e) {
+  if (e.key === 'Escape' && isModalOpen.value) close()
+}
+function lockScroll(yes){
+  document.documentElement.style.overflow = yes ? 'hidden' : ''
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  window.addEventListener('keydown', onEsc)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('keydown', onEsc)
 })
-
 </script>
+
+<style>
+/* Анимация по желанию */
+.fade-zoom-enter-from, .fade-zoom-leave-to { opacity: 0; transform: scale(.98) translateY(6px); }
+.fade-zoom-enter-active, .fade-zoom-leave-active { transition: all .18s ease; }
+</style>
