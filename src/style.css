@@ -3,10 +3,3 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
-@media screen and (min-width: 1024px) {
-  body {
-    zoom: 1.1; /* 150% */
-    transform-origin: 0 0;
-  }
-}
