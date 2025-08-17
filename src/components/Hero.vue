@@ -46,7 +46,7 @@
       <div class="flex justify-center mt-4 w-[320px] sm:w-[420px] transition-transform duration-15"
       :style="{ transform: `translateY(${scrollY * 0.05}px)` }">
         <ProductCard 
-          image="/burger.png" 
+          image="burger.png" 
           title="Биг Мак" 
           price="99.90" 
           imageWidth="w-58"
