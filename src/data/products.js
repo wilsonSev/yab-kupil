@@ -2,28 +2,28 @@ export const products = [
   {
     id: 1,
     title: "Биг Мак",
-    image: "/burger.png",
+    image: "burger.png",
     price: "99.90",
     imageWidth: "w-58"
   },
   {
     id: 2,
     title: "Пакет с воздухом из 2007",
-    image: "/Pack.png",
+    image: "Pack.png",
     price: "2007.00",
     imageWidth: "w-40"
   },
   {
     id: 3,
     title: "Доширак",
-    image: "/Doshik.png",
+    image: "Doshik.png",
     price: "0.99",
     imageWidth: "w-40"
   },
   {
     id: 4,
     title: "Половинка кирпича",
-    image: "/Brick2.png",
+    image: "Brick2.png",
     price: "99.90",
     imageWidth: "w-40"
   },
@@ -50,14 +50,14 @@ export const products = [
   {
     id: 8,
     title: "Это не футболка",
-    image: "/T-shirt.png",
+    image: "T-shirt.png",
     price: "23.99",
     imageWidth: "w-44"
   },
   {
     id: 9,
     title: "Камень среднего размера",
-    image: "/rock.png",
+    image: "rock.png",
     price: "0.99",
     imageWidth: "w-40"
   }
