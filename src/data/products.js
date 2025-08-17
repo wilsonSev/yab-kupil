@@ -1,7 +1,4 @@
-const withBase = (p) =>
-  p ? new URL(p.replace(/^\//, ''), import.meta.env.BASE_URL).href : '';
-
-const raw = [
+export const products = [
   {
     id: 1,
     title: "Биг Мак",
@@ -66,8 +63,3 @@ const raw = [
   }
 
 ]
-
-export const products = raw.map(p => ({
-  ...p,
-  image: p.image ? withBase(p.image) : ''
-}));
